@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ana</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0004e4;
+        }
+        .container {
+            background-color: #ff24ff;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            transform: rotate(-40deg);
+            width: 200px;
+            height: 200px;
+        }     
+        .container:hover {
+            transition: all ease 0.6s;
+            box-shadow: 1px 2px 7px #000 unset;
+            background-color: #0004e4;
+        }  
+        .container:after,.container::before {
+            content: "";
+            background-color: #ff24ff;
+            border-radius: 50%;
+            height: 200px;
+            position: absolute;
+            width: 200px;
+        }
+        .container:before {
+            top: -100px;
+        }
+
+        .container:after {
+            left: 100px;
+        }
+
+        .container:hover:after {
+            transition: all ease 0.6s;
+            box-shadow: 14px 11px 26px inset;
+            border-right-color: #9b039bdc;
+            position: absolute;
+            margin: -43px -46px;
+        }
+        .container:hover::before {
+            transition: all ease 0.6s;
+            box-shadow: 14px 11px 26px inset;
+            border-right-color: #9b039bdc;
+        }
+        .counter {
+            position: absolute;
+            z-index: 999;     
+            font-size: 20px;
+            text-align: center;
+            margin-left: 0px;
+            margin-top: 350px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="area-c"></div>
+    </div>
+    <div class="counter">
+        <span id="horas">1500</span> horas, <span id="minutos">60</span> minutos e <span id="segundos">60</span> segundos
+    </div>
+</body>
+    <script type="text/javascript">
+
+    </script>
+</html>
