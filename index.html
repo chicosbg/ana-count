@@ -76,10 +76,27 @@
         <div class="area-c"></div>
     </div>
     <div class="counter">
-        <span id="horas">1500</span> horas, <span id="minutos">60</span> minutos e <span id="segundos">60</span> segundos
+        <span id="dias">0</span> dia(s), <span id="horas">0</span> horas, <span id="minutos">0</span> minutos e <span id="segundos">0</span> segundos
     </div>
 </body>
     <script type="text/javascript">
+        const horas = document.querySelector('#horas');
+        const minutos = document.querySelector('#minutos');
+        const dias = document.querySelector('#dias');
+        const segundos = document.querySelector('#segundos');
         
+        setInterval(()=>{
+            let timer = new Date('2025-06-07 00:00:00');
+            let now = new Date();
+            let diff_time = timer.getTime() - now.getTime();
+            let segundos_t = diff_time / 1000;
+            let minutos_t = segundos_t/60;
+            let horas_t = minutos_t/60;
+            let dias_t = horas_t/24;
+            segundos.innerHTML = Math.ceil(segundos_t);
+            minutos.innerHTML = Math.ceil(minutos_t);
+            horas.innerHTML = Math.ceil(horas_t);
+            dias.innerHTML = Math.ceil(dias_t); 
+        }, 0);
     </script>
 </html>
