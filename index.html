@@ -76,7 +76,7 @@
         <div class="area-c"></div>
     </div>
     <div class="counter">
-        <span id="dias">0</span> dia(s), <span id="horas">0</span> horas, <span id="minutos">0</span> minutos e <span id="segundos">0</span> segundos
+        <span id="dias">0</span> dia(s), <span id="horas">0</span> horas, <span id="minutos">0</span> minutos e <span id="segundos">0</span> segundos que estamos juntos
     </div>
 </body>
     <script type="text/javascript">
@@ -93,10 +93,10 @@
             let minutos_t = segundos_t/60;
             let horas_t = minutos_t/60;
             let dias_t = horas_t/24;
-            segundos.innerHTML = Math.ceil(segundos_t);
-            minutos.innerHTML = Math.ceil(minutos_t);
-            horas.innerHTML = Math.ceil(horas_t);
-            dias.innerHTML = Math.round(dias_t); 
+            segundos.innerHTML = Math.ceil(segundos_t) * -1;
+            minutos.innerHTML = Math.ceil(minutos_t) * -1;
+            horas.innerHTML = Math.ceil(horas_t) * -1;
+            dias.innerHTML = Math.round(dias_t)* -1; 
         }, 0);
     </script>
 </html>
